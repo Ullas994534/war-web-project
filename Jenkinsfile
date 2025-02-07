@@ -35,7 +35,7 @@ pipeline {                                    // 1  // Defines the start of the 
             }                                 // 9  // Ends the environment block for this stage
 
             steps {                           // 10  // Defines the steps that will be executed in this stage
-                withSonarQubeEnv('bangalore-test1') {
+                withSonarQubeEnv('ullas-server') {
                                               // Executes the SonarQube analysis within the SonarQube environment
                     sh "${scannerHome}/bin/sonar-scanner"
                                               // Runs the SonarQube scanner tool
