@@ -30,12 +30,12 @@ pipeline {                                    // 1  // Defines the start of the 
 
         stage('SonarQube analysis') {         // 8  // Creates a stage named 'SonarQube analysis'
             environment {                     // 9  // Defines environment variables specific to this stage
-                scannerHome = tool 'ullas-scanner'
+                scannerHome = tool 'vivek-scanner'
                                               // Sets the SonarQube scanner tool
             }                                 // 9  // Ends the environment block for this stage
 
             steps {                           // 10  // Defines the steps that will be executed in this stage
-                withSonarQubeEnv('ullas-server') {
+                withSonarQubeEnv('vivek-server') {
                                               // Executes the SonarQube analysis within the SonarQube environment
                     sh "${scannerHome}/bin/sonar-scanner"
                                               // Runs the SonarQube scanner tool
